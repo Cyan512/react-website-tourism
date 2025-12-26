@@ -1,1 +1,1 @@
-export const APP_NAME = 'Quantum Software';
+export const APP_NAME = 'Horizonte Exploor';
