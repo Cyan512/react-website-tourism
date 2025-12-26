@@ -5,7 +5,6 @@ import Footer from "@/components/organisms/footer/footer";
 export default function MainLayout() {
     return (
         <>
-            <Header />
             <Outlet />
             <Footer />
         </>
