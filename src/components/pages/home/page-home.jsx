@@ -1,34 +1,35 @@
 import {assets} from "@/assets/img";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation, Autoplay} from "swiper/modules";
-import {destinationsMock} from "@/data/destinations.mock.js"
+import {destinationsMock} from "@/data/destinations.mock.js";
 
 import "swiper/css";
 import "swiper/css/navigation";
 
 export default function PageHome() {
-    const loopCategories = [...destinationsMock, ...destinationsMock];
+    const loopCategories = Array.isArray(destinationsMock) ? [...destinationsMock, ...destinationsMock] : [];
+
     return (
         <>
-            <section style={{backgroundImage: `url(${assets.hero_bg_1_1})`}}>
+            <section
+                style={{backgroundImage: `url(${assets.hero_bg_1_1})`}}
+            >
                 <div/>
                 <div>
                     <div>
                         <div>
-                            <span>Get unforgetable pleasure with us</span>
-                            <h1>Natural Wonder of the world</h1>
+                            <span>Get unforgettable pleasure with us</span>
+                            <h1>Natural Wonder of the World</h1>
+
                             <div>
                                 <a href="">
                                     <span></span>
-                                    <span>
-                                        Explore Tours
-                                    </span>
+                                    <span>Explore Tours</span>
                                 </a>
+
                                 <a href="">
                                     <span></span>
-                                    <span>
-                                        Our Services
-                                    </span>
+                                    <span>Our Services</span>
                                 </a>
                             </div>
                         </div>
@@ -37,17 +38,22 @@ export default function PageHome() {
                 </div>
             </section>
             <main>
-                <section style={{backgroundImage: `url(${assets.line_pattern3})`}}>
+                <section
+                    style={{backgroundImage: `url(${assets.line_pattern3})`}}
+                >
                     <div>
                         <div>
                             <div>
                                 <span>Top Destination</span>
-                                <h2>Popular Destination</h2>
+                                <h2>Popular Destinations</h2>
                             </div>
+
                             <div>
                                 <h2>850+ Destinations</h2>
-                                <p>One of the most well-liked travel companies for people looking to
-                                    experience adventure and see the world is Tourm.</p>
+                                <p>
+                                    One of the most well-liked travel companies for people
+                                    looking to experience adventure and see the world is Tour.
+                                </p>
                             </div>
                         </div>
                         <Swiper
@@ -61,46 +67,35 @@ export default function PageHome() {
                             }}
                             speed={800}
                             breakpoints={{
-                                0: {
-                                    slidesPerView: 1,
-                                },
-                                640: {
-                                    slidesPerView: 2,
-                                },
-                                1024: {
-                                    slidesPerView: 3,
-                                },
-                                1200: {
-                                    slidesPerView: 4,
-                                },
+                                0: {slidesPerView: 1},
+                                640: {slidesPerView: 2},
+                                1024: {slidesPerView: 3},
+                                1200: {slidesPerView: 4},
                             }}
                         >
-                            {loopCategories.map((cat, index) => (
-                                <SwiperSlide key={index} className="rounded-2xl overflow-hidden">
-                                    <div className="flex flex-col items-center">
-                                        <div className="w-full h-64">
-                                            <img
-                                                src={cat.img}
-                                                alt={cat.title}
-                                                className="w-full h-full object-cover"
-                                            />
+                            <>
+                                {loopCategories.map((cat, index) => (
+                                    <SwiperSlide key={index}>
+                                        <div>
+                                            <div>
+                                                <img
+                                                    src={cat.img}
+                                                    alt={cat.title}
+                                                />
+                                            </div>
+
+                                            <div>
+                                                <a href={cat.href}>{cat.title}</a>
+                                                <span>See More</span>
+                                            </div>
                                         </div>
-                                        <div className="pt-4 flex flex-col items-center w-full bg-theme/20">
-                                            <a
-                                                href={cat.href}
-                                                className="text-2xl font-semibold hover:text-[#1EB3D7] transition-colors"
-                                            >
-                                                {cat.title}
-                                            </a>
-                                            <span className="text-sm mt-1">See More</span>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                            ))}
+                                    </SwiperSlide>
+                                ))}
+                            </>
                         </Swiper>
                     </div>
                 </section>
             </main>
         </>
-    )
+    );
 }
