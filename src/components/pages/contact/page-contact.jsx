@@ -15,7 +15,7 @@ export default function PageContact() {
                     <div className="text-center mb-16">
                         <h4 className="text-primary text-2xl mb-2">Get In Touch</h4>
                         <h2 className="text-4xl md:text-5xl font-bold text-title uppercase tracking-tight">Our Contact
-                            Information</h2>
+                            Informatión</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div
