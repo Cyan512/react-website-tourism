@@ -17,9 +17,9 @@ export default function PageContact() {
                         <h2 className="text-4xl md:text-5xl font-bold text-title uppercase tracking-tight">Our Contact
                             Informatión</h2>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="flex flex-wrap gap-8">
                         <div
-                            className="bg-white p-8 rounded-xl  border border-gray-100 flex items-center gap-6">
+                            className="flex-1 bg-white p-8 rounded-xl  border border-gray-100 flex items-center gap-6">
                             <div
                                 className="w-16 h-16 bg-title rounded-full flex items-center justify-center text-white shrink-0">
                                 <MapPin size={28}/>
@@ -31,7 +31,7 @@ export default function PageContact() {
                             </div>
                         </div>
                         <div
-                            className="bg-white p-8 rounded-xl  border border-gray-100 flex items-center gap-6">
+                            className="flex-1 bg-white p-8 rounded-xl  border border-gray-100 flex items-center gap-6">
                             <div
                                 className="w-16 h-16 bg-title rounded-full flex items-center justify-center text-white shrink-0">
                                 <Phone size={28}/>
@@ -43,7 +43,7 @@ export default function PageContact() {
                             </div>
                         </div>
                         <div
-                            className="bg-white p-8 rounded-xl  border border-gray-100 flex items-center gap-6">
+                            className="flex-1 bg-white p-8 rounded-xl  border border-gray-100 flex items-center gap-6">
                             <div
                                 className="w-16 h-16 bg-title rounded-full flex items-center justify-center text-white shrink-0">
                                 <Mail size={28}/>
