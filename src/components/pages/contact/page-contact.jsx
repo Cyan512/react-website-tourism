@@ -62,6 +62,24 @@ export default function PageContact() {
 
                 </ContainerLayout>
             </section>
+            <main>
+                <section>
+
+                </section>
+                <section className="w-full h-[450px] relative overflow-hidden">
+                    <iframe
+                        title="Location Map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14594.137812833132!2d89.2319246!3d24.0121708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe84e4f8a3d5f1%3A0x6b772c7a0e365824!2sPabna%2C%20Bangladesh!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0, filter: 'grayscale(0.2) contrast(1.1)' }}
+                        allowFullScreen=""
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        className="grayscale-[20%]"
+                    ></iframe>
+                </section>
+            </main>
         </>
     );
 }
