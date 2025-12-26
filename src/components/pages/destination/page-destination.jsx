@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function PageDestination() {
-  return (
-    <div>page-destination</div>
-  )
+    return <div>page-destination</div>;
 }

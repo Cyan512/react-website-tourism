@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function PageContact() {
-  return (
-    <div>page-contact</div>
-  )
+    return <div>page-contact</div>;
 }

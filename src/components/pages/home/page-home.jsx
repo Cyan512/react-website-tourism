@@ -1,20 +1,20 @@
-import {assets} from "@/assets/img";
-import {Swiper, SwiperSlide} from "swiper/react";
-import {Navigation, Autoplay} from "swiper/modules";
-import {destinationsMock} from "@/data/destinations.mock.js";
+import { assets } from "@/assets/img";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import { destinationsMock } from "@/data/destinations.mock.js";
 
 import "swiper/css";
 import "swiper/css/navigation";
 
 export default function PageHome() {
-    const loopCategories = Array.isArray(destinationsMock) ? [...destinationsMock, ...destinationsMock] : [];
+    const loopCategories = Array.isArray(destinationsMock)
+        ? [...destinationsMock, ...destinationsMock]
+        : [];
 
     return (
         <>
-            <section
-                style={{backgroundImage: `url(${assets.hero_bg_1_1})`}}
-            >
-                <div/>
+            <section style={{ backgroundImage: `url(${assets.hero_bg_1_1})` }}>
+                <div />
                 <div>
                     <div>
                         <div>
@@ -33,14 +33,12 @@ export default function PageHome() {
                                 </a>
                             </div>
                         </div>
-                        <div/>
+                        <div />
                     </div>
                 </div>
             </section>
             <main>
-                <section
-                    style={{backgroundImage: `url(${assets.line_pattern3})`}}
-                >
+                <section style={{ backgroundImage: `url(${assets.line_pattern3})` }}>
                     <div>
                         <div>
                             <div>
@@ -51,8 +49,8 @@ export default function PageHome() {
                             <div>
                                 <h2>850+ Destinations</h2>
                                 <p>
-                                    One of the most well-liked travel companies for people
-                                    looking to experience adventure and see the world is Tour.
+                                    One of the most well-liked travel companies for people looking
+                                    to experience adventure and see the world is Tour.
                                 </p>
                             </div>
                         </div>
@@ -67,10 +65,10 @@ export default function PageHome() {
                             }}
                             speed={800}
                             breakpoints={{
-                                0: {slidesPerView: 1},
-                                640: {slidesPerView: 2},
-                                1024: {slidesPerView: 3},
-                                1200: {slidesPerView: 4},
+                                0: { slidesPerView: 1 },
+                                640: { slidesPerView: 2 },
+                                1024: { slidesPerView: 3 },
+                                1200: { slidesPerView: 4 },
                             }}
                         >
                             <>
@@ -78,10 +76,7 @@ export default function PageHome() {
                                     <SwiperSlide key={index}>
                                         <div>
                                             <div>
-                                                <img
-                                                    src={cat.img}
-                                                    alt={cat.title}
-                                                />
+                                                <img src={cat.img} alt={cat.title} />
                                             </div>
 
                                             <div>
