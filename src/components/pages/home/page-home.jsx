@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function PageHome() {
   return (
-    <div>page-homes</div>
+    <div>page-homess</div>
   )
 }
