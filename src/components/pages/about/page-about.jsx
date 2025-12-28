@@ -14,6 +14,7 @@ import {
     ChevronRight,
     Star,
 } from "lucide-react";
+
 export default function PageAbout() {
     return (
         <>
@@ -109,6 +110,16 @@ export default function PageAbout() {
                                     className="group-hover:translate-x-1 transition-transform"
                                 />
                             </button>
+                        </div>
+                    </ContainerLayout>
+                </section>
+                <section className="py-24 bg-white">
+                    <ContainerLayout>
+                        <div className="text-center mb-16">
+                            <h4 className="text-primary text-2xl mb-2">Services We Offer</h4>
+                            <h2 className="text-4xl md:text-5xl font-bold text-title uppercase tracking-tight">
+                                Our Amazing Services
+                            </h2>
                         </div>
                     </ContainerLayout>
                 </section>

@@ -1,0 +1,22 @@
+{
+    "category.1": "categoria 1 es",
+    "category.2": "categoria 2 es",
+    "category.3": "categoria 3 es",
+    "category.4": "categoria 4 es",
+    "category.5": "categoria 5 es",
+    "destination.1.category.1": "categoria 1 destino 1 es",
+    "destination.2.category.1": "categoria 1 destino 2 es",
+    "destination.3.category.1": "categoria 1 destino 3 es",
+    "destination.1.category.2": "categoria 2 destino 1 es",
+    "destination.2.category.2": "categoria 2 destino 2 es",
+    "destination.3.category.2": "categoria 2 destino 3 es",
+    "destination.1.category.3": "categoria 3 destino 1 es",
+    "destination.2.category.3": "categoria 3 destino 2 es",
+    "destination.3.category.3": "categoria 3 destino 3 es",
+    "destination.1.category.4": "categoria 4 destino 1 es",
+    "destination.2.category.4": "categoria 4 destino 2 es",
+    "destination.3.category.4": "categoria 4 destino 3 es",
+    "destination.1.category.5": "categoria 5 destino 1 es",
+    "destination.2.category.5": "categoria 5 destino 2 es",
+    "destination.3.category.5": "categoria 5 destino 3 es"
+}

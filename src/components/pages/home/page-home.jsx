@@ -1,15 +1,15 @@
 import { assets } from "@/assets/img";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
-import { destinationsMock } from "@/data/destinations.mock.js";
+import { categoryV1 } from "@/data/destinations-mock-1.js";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import { useTranslation } from "react-i18next";
 
 export default function PageHome() {
-    const loopCategories = Array.isArray(destinationsMock)
-        ? [...destinationsMock, ...destinationsMock]
-        : [];
+    const { t } = useTranslation("global");
+    const loopCategories = Array.isArray(categoryV1) ? [...categoryV1, ...categoryV1] : [];
 
     return (
         <>
@@ -76,11 +76,11 @@ export default function PageHome() {
                                     <SwiperSlide key={index}>
                                         <div>
                                             <div>
-                                                <img src={cat.img} alt={cat.title} />
+                                                <img src={assets[cat.img]} alt={cat.title} />
                                             </div>
 
                                             <div>
-                                                <a href={cat.href}>{cat.title}</a>
+                                                <a href={cat.href}>{t(cat.title)}</a>
                                                 <span>See More</span>
                                             </div>
                                         </div>
