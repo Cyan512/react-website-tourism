@@ -1,7 +1,7 @@
 import React from "react";
 import { Clock, Star, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { assets } from "@/assets/img/index.js"; // Usando lucide-react para los iconos
+import { assets } from "@/assets/img/index.js";
 
 const DestinationCard = ({ destination }) => {
     const { t } = useTranslation("global");
