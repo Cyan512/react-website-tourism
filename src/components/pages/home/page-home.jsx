@@ -81,7 +81,7 @@ export default function PageHome() {
 
                                             <div>
                                                 <a href={cat.href}>{t(cat.title)}</a>
-                                                <span>See More</span>
+                                                <span>See Morse</span>
                                             </div>
                                         </div>
                                     </SwiperSlide>
