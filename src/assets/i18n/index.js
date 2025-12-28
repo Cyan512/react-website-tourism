@@ -17,7 +17,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
     resources,
-    lng: "es",
+    lng: "en",
     fallbackLng: "es",
     defaultNS: "global",
     interpolation: {
