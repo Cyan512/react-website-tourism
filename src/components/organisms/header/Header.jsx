@@ -1,12 +1,13 @@
 import { MapPin, Clock, ChevronDown } from "lucide-react";
 import { assets } from "@/assets/img/index.js";
 import ContainerLayout from "@/components/templates/layout/container-layout.jsx";
+import NavBar from "@/components/organisms/header/NavBar.jsx";
 
 const Header = () => {
     return (
-        <header className="fixed top-0 left-0 right-0 z-100 text-black">
-            <div className="bg-white border-b border-gray-300 px-4 py-2 text-xs">
-                <ContainerLayout className=" flex justify-between items-center">
+        <header className="shadow text-black">
+            <div className="border-b border-gray-300 py-2 text-sm">
+                <ContainerLayout className="flex justify-between items-center">
                     <div className="flex gap-6 items-center">
                         <div className="flex items-center gap-2">
                             <MapPin size={16} />
@@ -34,30 +35,17 @@ const Header = () => {
                     </div>
                 </ContainerLayout>
             </div>
-            <nav className="bg-white px-4">
-                <div className="container mx-auto flex justify-between items-center">
-                    <a href="" className="py-2">
-                        <img src={assets.logo} alt="" className="h-14 w-auto" />
+            <div>
+                <ContainerLayout className="flex justify-between items-center">
+                    <a href="/" className="py-2">
+                        <img src={assets.logo} className="h-14 w-auto" />
                     </a>
-                    <ul className="flex items-center gap-8">
-                        <li>
-                            <a href="/">Inicio</a>
-                        </li>
-                        <li>
-                            <a href="/about">Sobre Nosotros</a>
-                        </li>
-                        <li>
-                            <a href="/destination">Destinos</a>
-                        </li>
-                        <li className="">
-                            <a href="/contact">Contactanos</a>
-                        </li>
-                    </ul>
+                    <NavBar />
                     <div>
                         <button>Book Now</button>
                     </div>
-                </div>
-            </nav>
+                </ContainerLayout>
+            </div>
         </header>
     );
 };

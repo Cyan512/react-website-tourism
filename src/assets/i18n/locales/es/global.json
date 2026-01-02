@@ -19,5 +19,9 @@
     "destination.1.category.5": "categoria 5 destino 1 es",
     "destination.2.category.5": "categoria 5 destino 2 es",
     "destination.3.category.5": "categoria 5 destino 3 es",
-    "common.search": "Buscar"
+    "common.search": "Buscar",
+    "common.home": "Inicio",
+    "common.about": "Sobre Nosotros",
+    "common.destination": "Destinos",
+    "common.contact": "Contactanos"
 }
