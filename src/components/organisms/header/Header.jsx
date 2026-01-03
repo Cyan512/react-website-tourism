@@ -4,7 +4,7 @@ import { MapPin, Clock, X, Menu } from "lucide-react";
 import { assets } from "@/assets/img/index.js";
 import { navigation } from "@/data/Navigation.js";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { cn } from "@/shared/utils/tailwind-utils.js";
 
 const TravelHeader = () => {
@@ -27,9 +27,43 @@ const TravelHeader = () => {
                     className="fixed inset-0 bg-black/80 z-10 lg:hidden"
                 />
             )}
-            <button onClick={handleToggleMenu}>{isMobileMenuOpen ? <X /> : <Menu />}</button>
             <div>
+                <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
+                    <figure>
+                        <Link className="inline-flex">
+                            <img src={assets.logo} className="w-64 py-2" />
+                        </Link>
+                    </figure>
+                    <div className="hidden lg:flex space-x-4">
+                        {navigation.map((nav) => (
+                            <NavLink to={nav.path} className="text-title">
+                                {({ isActive }) => (
+                                    <div className="group inline-flex flex-col items-start py-2 text-base font-medium">
+                                        {t(nav.label)}
 
+                                        <span
+                                            className={cn(
+                                                "mt-1 h-[2px] w-full bg-title origin-left transition-transform duration-300",
+                                                isActive
+                                                    ? "scale-x-100"
+                                                    : "scale-x-0 group-hover:scale-x-100"
+                                            )}
+                                        />
+                                    </div>
+                                )}
+                            </NavLink>
+                        ))}
+                    </div>
+                    <div>
+                        <Link className="hidden lg:inline-flex">Reservar</Link>
+                        <button
+                            onClick={handleToggleMenu}
+                            className="lg:hidden bg-primary text-white p-3 rounded-lg"
+                        >
+                            <Menu />
+                        </button>
+                    </div>
+                </div>
             </div>
             <nav
                 className={cn(
