@@ -13,7 +13,6 @@ const menuItems = [
 ];
 
 export default function MobileMenu({ open, onClose }) {
-
     if (!open) return null;
 
     return (
