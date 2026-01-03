@@ -5,15 +5,7 @@ import {
     ArrowRight,
     ShieldCheck,
     Plane,
-    Users,
-    Facebook,
-    Twitter,
-    Linkedin,
-    Youtube,
-    Instagram,
-    ChevronLeft,
-    ChevronRight,
-    Star,
+    Users
 } from "lucide-react";
 
 export default function PageAbout() {
@@ -118,7 +110,7 @@ export default function PageAbout() {
                     <div className="max-w-7xl mx-auto px-4">
                         <div className="text-center mb-16">
                             <h4 className="font-serif text-[#1EB3D7] text-2xl mb-2 italic">
-                                Services We Offer
+                                Services We Offerrrrr prueba de cambio
                             </h4>
                             <h2 className="text-4xl md:text-5xl font-bold text-[#123E46] uppercase tracking-tight">
                                 Our Amazing Services
