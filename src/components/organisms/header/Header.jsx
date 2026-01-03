@@ -20,7 +20,7 @@ const TravelHeader = () => {
             <button onClick={handleToggleMenu}>{isMobileMenuOpen ? <X /> : <Menu />}</button>
             <nav
                 className={cn(
-                    "fixed top-0 left-0 h-[100dvh] w-72 bg-white shadow-lg border-r-2 border-title md:hidden transition-transform",
+                    "fixed top-0 left-0 h-screen w-72 bg-white shadow-lg border-r-2 border-title md:hidden transition-transform",
                     isMobileMenuOpen
                         ? "translate-x-0 overflow-visible"
                         : "-translate-x-full overflow-hidden"
