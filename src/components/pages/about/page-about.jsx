@@ -1,12 +1,6 @@
 import SectionTitleBanner from "@/components/organisms/SectionTitleBanner";
 import ContainerLayout from "@/components/templates/layout/container-layout";
-import { services } from "@/data/servicesMock";
-import {
-    ArrowRight,
-    ShieldCheck,
-    Plane,
-    Users
-} from "lucide-react";
+import { ArrowRight, ShieldCheck, Plane, Users } from "lucide-react";
 
 export default function PageAbout() {
     return (
@@ -105,51 +99,6 @@ export default function PageAbout() {
                             </button>
                         </div>
                     </ContainerLayout>
-                </section>
-                <section className="py-24 bg-white">
-                    <div className="max-w-7xl mx-auto px-4">
-                        <div className="text-center mb-16">
-                            <h4 className="font-serif text-[#1EB3D7] text-2xl mb-2 italic">
-                                Services We Offerrrrr prueba de cambio
-                            </h4>
-                            <h2 className="text-4xl md:text-5xl font-bold text-[#123E46] uppercase tracking-tight">
-                                Our Amazing Services
-                            </h2>
-                        </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                            {services.map((service, index) => (
-                                <div
-                                    key={index}
-                                    className="bg-[#F0F9FB] rounded-2xl overflow-hidden group hover:shadow-xl transition-all duration-300 border border-transparent hover:border-[#1EB3D7]/20"
-                                >
-                                    <div className="h-56 overflow-hidden">
-                                        <img
-                                            src={service.img}
-                                            alt={service.title}
-                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                                        />
-                                    </div>
-
-                                    <div className="p-6 text-center">
-                                        <h3 className="text-xl font-bold text-[#123E46] mb-1">
-                                            {service.title}
-                                        </h3>
-                                        <p className="text-gray-400 text-sm mb-6 font-medium">
-                                            {service.listings} Listing
-                                        </p>
-
-                                        <button className="inline-flex items-center gap-2 border border-[#1EB3D7] text-[#1EB3D7] px-6 py-2 rounded-lg font-bold hover:bg-[#1EB3D7] hover:text-white transition-colors group/btn">
-                                            Book Now
-                                            <ArrowRight
-                                                size={16}
-                                                className="group-hover/btn:translate-x-1 transition-transform"
-                                            />
-                                        </button>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
                 </section>
             </main>
         </>
