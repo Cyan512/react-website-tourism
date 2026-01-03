@@ -4,7 +4,7 @@ import { MapPin, Clock, X, Menu } from "lucide-react";
 import { assets } from "@/assets/img/index.js";
 import { navigation } from "@/data/Navigation.js";
 import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { cn } from "@/shared/utils/tailwind-utils.js";
 
 const TravelHeader = () => {
@@ -31,7 +31,7 @@ const TravelHeader = () => {
                 )}
             >
                 <figure className="shrink-0 relative flex justify-center bg-primary/10">
-                    <img src={assets.logo} className="w-48 pt-10 pb-7" />
+                    <img src={assets.logo} className="w-52 pt-10 pb-7" />
                     <button
                         onClick={handleToggleMenu}
                         className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-title text-white p-2 rounded-full"
@@ -39,20 +39,16 @@ const TravelHeader = () => {
                         <X size={18} />
                     </button>
                 </figure>
-                <div className="flex-1 overflow-y-auto mt-7">
+                <div className="flex-1 overflow-y-auto mt-7 px-6">
                     {navigation.map((nav) => (
-                        <div key={nav.label}>
-                            <div>
-                                <NavLink
-                                    to={nav.path}
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                    className={({ isActive }) =>
-                                        cn("text-base px-6 py-4 flex", isActive ? "" : "")
-                                    }
-                                >
-                                    {t(nav.label)}
-                                </NavLink>
-                            </div>
+                        <div key={nav.label} className="py-3.5 border-b border-gray-300">
+                            <Link
+                                to={nav.path}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-base font-normal text-title flex"
+                            >
+                                {t(nav.label)}
+                            </Link>
                         </div>
                     ))}
                 </div>
