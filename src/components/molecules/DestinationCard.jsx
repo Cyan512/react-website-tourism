@@ -6,7 +6,7 @@ import { assets } from "@/assets/img/index.js";
 const DestinationCard = ({ destination }) => {
     const { t } = useTranslation("global");
     return (
-        <div className="max-w-[320px] bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+        <div className="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
             {/* Imagen del Destino */}
             <div className="relative h-64 overflow-hidden">
                 <img
