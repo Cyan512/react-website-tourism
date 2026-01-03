@@ -47,13 +47,15 @@ import img_41 from "./gallery/img_41.webp";
 import img_42 from "./gallery/img_42.webp";
 import img_43 from "./gallery/img_43.webp";
 import img_44 from "./gallery/img_44.webp";
+//
+import logo_bg_mask from "./logo_bg_mask.png";
 
 export const assets = {
     hero_bg_1_1,
     arrow_right,
     line_pattern3,
     logo,
-
+    //
     img_1,
     img_2,
     img_3,
@@ -98,4 +100,6 @@ export const assets = {
     img_42,
     img_43,
     img_44,
+    //
+    logo_bg_mask,
 };

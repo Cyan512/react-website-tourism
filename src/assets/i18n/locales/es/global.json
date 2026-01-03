@@ -23,5 +23,8 @@
     "common.home": "Inicio",
     "common.about": "Sobre Nosotros",
     "common.destination": "Destinos",
-    "common.contact": "Contactanos"
+    "common.contact": "Contactanos",
+    "common.language": "Idioma",
+    "common.es": "Español",
+    "common.en": "Ingles"
 }

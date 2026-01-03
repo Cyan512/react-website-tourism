@@ -1,53 +1,57 @@
-import { MapPin, Clock, ChevronDown } from "lucide-react";
+import React, { useState } from "react";
+
+import { MapPin, Clock, X, Menu } from "lucide-react";
 import { assets } from "@/assets/img/index.js";
-import ContainerLayout from "@/components/templates/layout/container-layout.jsx";
-import NavBar from "@/components/organisms/header/NavBar.jsx";
+import { navigation } from "@/data/Navigation.js";
+import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
+import { cn } from "@/shared/utils/tailwind-utils.js";
 
-const Header = () => {
+const TravelHeader = () => {
+    const { t } = useTranslation("global");
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const handleToggleMenu = () => {
+        setIsMobileMenuOpen((prev) => !prev);
+    };
+
     return (
-        <header className="shadow text-black">
-            <div className="border-b border-gray-300 py-2 text-sm">
-                <ContainerLayout className="flex justify-between items-center">
-                    <div className="flex gap-6 items-center">
-                        <div className="flex items-center gap-2">
-                            <MapPin size={16} />
-                            <span>45 New Eskaton Road, Austria</span>
-                        </div>
-                        <div className="h-4 bg-black w-px" />
-                        <div className="flex items-center gap-2">
-                            <Clock size={16} />
-                            <span>Sun to Friday: 8.00 am - 7.00 pm</span>
+        <header className="relative z-100">
+            <button onClick={handleToggleMenu}>{isMobileMenuOpen ? <X /> : <Menu />}</button>
+            <nav
+                className={cn(
+                    "fixed top-0 left-0 h-full w-72 bg-white shadow-lg border-r-2 border-title md:hidden transition-transform",
+                    isMobileMenuOpen
+                        ? "translate-x-0 overflow-visible"
+                        : "-translate-x-full overflow-hidden"
+                )}
+            >
+                <figure className="relative flex justify-center bg-primary/10">
+                    <img src={assets.logo} className="w-48 pt-10 pb-7" />
+                    <button
+                        onClick={handleToggleMenu}
+                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-title text-white p-2 rounded-full"
+                    >
+                        <X size={18} />
+                    </button>
+                </figure>
+                {navigation.map((nav) => (
+                    <div key={nav.label}>
+                        <div>
+                            <NavLink
+                                to={nav.path}
+                                className={({ isActive }) =>
+                                    cn("text-base px-6 py-4 flex", isActive ? "" : "")
+                                }
+                            >
+                                {t(nav.label)}
+                            </NavLink>
                         </div>
                     </div>
-
-                    <div className="flex gap-6 items-cente">
-                        <div className="relative">
-                            <button className="flex items-center gap-1 border rounded-full px-3 py-1">
-                                Language <ChevronDown size={14} />
-                            </button>
-                        </div>
-
-                        <div className="flex items-center gap-4">
-                            <a href="">FAQ</a>
-                            <div className="h-4 bg-black w-px" />
-                            <a href="">Support</a>
-                        </div>
-                    </div>
-                </ContainerLayout>
-            </div>
-            <div>
-                <ContainerLayout className="flex justify-between items-center">
-                    <a href="/" className="py-2">
-                        <img src={assets.logo} className="h-14 w-auto" />
-                    </a>
-                    <NavBar />
-                    <div>
-                        <button>Book Now</button>
-                    </div>
-                </ContainerLayout>
-            </div>
+                ))}
+            </nav>
         </header>
     );
 };
 
-export default Header;
+export default TravelHeader;
