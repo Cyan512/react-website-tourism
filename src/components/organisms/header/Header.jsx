@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import { MapPin, Clock, X, Menu } from "lucide-react";
 import { assets } from "@/assets/img/index.js";
@@ -20,11 +20,20 @@ const TravelHeader = () => {
     }, [isMobileMenuOpen]);
 
     return (
-        <header className="relative z-100">
+        <header className="relative">
+            {isMobileMenuOpen && (
+                <div
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="fixed inset-0 bg-black/80 z-10 lg:hidden"
+                />
+            )}
             <button onClick={handleToggleMenu}>{isMobileMenuOpen ? <X /> : <Menu />}</button>
+            <div>
+
+            </div>
             <nav
                 className={cn(
-                    "fixed top-0 left-0 h-full w-72 bg-white shadow-lg border-r-2 border-title lg:hidden flex flex-col transition-transform",
+                    "fixed top-0 left-0 h-full w-72 bg-white shadow-lg border-r-2 border-title flex flex-col transition-transform lg:hidden z-50",
                     isMobileMenuOpen
                         ? "translate-x-0 overflow-visible"
                         : "-translate-x-full overflow-hidden"
