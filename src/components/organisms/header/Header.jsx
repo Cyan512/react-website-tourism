@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { MapPin, Clock, X, Menu } from "lucide-react";
 import { assets } from "@/assets/img/index.js";
@@ -14,6 +14,10 @@ const TravelHeader = () => {
     const handleToggleMenu = () => {
         setIsMobileMenuOpen((prev) => !prev);
     };
+
+    useEffect(() => {
+        document.body.style.overflow = isMobileMenuOpen ? "hidden" : "auto";
+    }, [isMobileMenuOpen]);
 
     return (
         <header className="relative z-100">
