@@ -116,7 +116,6 @@ export default function PageAbout() {
                 </section>
                 <section className="py-24 bg-white">
                     <div className="max-w-7xl mx-auto px-4">
-                        {/* Encabezado de Sección */}
                         <div className="text-center mb-16">
                             <h4 className="font-serif text-[#1EB3D7] text-2xl mb-2 italic">
                                 Services We Offer
@@ -125,15 +124,12 @@ export default function PageAbout() {
                                 Our Amazing Services
                             </h2>
                         </div>
-
-                        {/* Cuadrícula de Servicios */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                             {services.map((service, index) => (
                                 <div
                                     key={index}
                                     className="bg-[#F0F9FB] rounded-2xl overflow-hidden group hover:shadow-xl transition-all duration-300 border border-transparent hover:border-[#1EB3D7]/20"
                                 >
-                                    {/* Imagen del Servicio */}
                                     <div className="h-56 overflow-hidden">
                                         <img
                                             src={service.img}
@@ -142,7 +138,6 @@ export default function PageAbout() {
                                         />
                                     </div>
 
-                                    {/* Contenido de la Tarjeta */}
                                     <div className="p-6 text-center">
                                         <h3 className="text-xl font-bold text-[#123E46] mb-1">
                                             {service.title}
@@ -151,7 +146,6 @@ export default function PageAbout() {
                                             {service.listings} Listing
                                         </p>
 
-                                        {/* Botón Book Now */}
                                         <button className="inline-flex items-center gap-2 border border-[#1EB3D7] text-[#1EB3D7] px-6 py-2 rounded-lg font-bold hover:bg-[#1EB3D7] hover:text-white transition-colors group/btn">
                                             Book Now
                                             <ArrowRight
