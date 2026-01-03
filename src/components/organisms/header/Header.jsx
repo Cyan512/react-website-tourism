@@ -15,10 +15,6 @@ const TravelHeader = () => {
         setIsMobileMenuOpen((prev) => !prev);
     };
 
-    useEffect(() => {
-        document.body.style.overflow = isMobileMenuOpen ? "hidden" : "auto";
-    }, [isMobileMenuOpen]);
-
     return (
         <header className="relative z-100">
             <button onClick={handleToggleMenu}>{isMobileMenuOpen ? <X /> : <Menu />}</button>
