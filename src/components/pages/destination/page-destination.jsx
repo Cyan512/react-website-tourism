@@ -3,7 +3,7 @@ import { categoryV1 } from "@/data/destinations-mock-1.js";
 import { useTranslation } from "react-i18next";
 import SearchBar from "@/components/molecules/SearchBar.jsx";
 import ContainerLayout from "@/components/templates/layout/container-layout.jsx";
-import SectionTitleBanner from "@/components/organisms/SectionTitleBanner.jsx";
+import SectionTitleBanner from "@/components/organisms/SectionTitlBanner.jsx";
 import DestinationCard from "@/components/molecules/DestinationCard.jsx";
 
 export default function PageDestination() {
@@ -25,6 +25,8 @@ export default function PageDestination() {
         selectedCategory === "all"
             ? categoryV1.flatMap((cat) => cat.destinationV1)
             : (categoryV1.find((cat) => cat.title === selectedCategory)?.destinationV1 ?? []);
+console.log("filteredByCategory:", filteredByCategory);
+
 
     const destinations = filteredByCategory.filter((dest) =>
         t(dest.title).toLowerCase().includes(searchTerm.toLowerCase())
@@ -39,6 +41,10 @@ export default function PageDestination() {
         setSearchTerm(inputValue);
         setCurrentPage(1);
     };
+
+    //
+
+    //
 
     return (
         <>
